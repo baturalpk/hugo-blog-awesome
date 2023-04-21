@@ -9,5 +9,7 @@
     alt="{{ $avatar_img_alt }}" width="{{ .Width }}" height="{{ .Height }}" />
     {{ end }}
     <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
-    <p class="author-bio">{{ .Site.Params.author.description }}</p>
+    <p class="author-bio">{{ (index .Site.Params.author.description 0) }}</p>
+    <br />
+    <p class="author-bio">{{ (index .Site.Params.author.description 1) }}</p>
 </div>
